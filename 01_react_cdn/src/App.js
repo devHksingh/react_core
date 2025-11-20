@@ -1,17 +1,32 @@
+import React from "https://esm.sh/react@19.1.0";
+import ReactDOM from "https://esm.sh/react-dom@19.1.0/client";
+
+
+// without jsx
+
 const App = () => {
-  return React.createElement(
-    "div",
-    {class:"test"},// attrebute
-    React.createElement("h1", {}, "learn react with cdn (react18)")
-  );
+  return React.createElement("div", {}, React.createElement("h1", {}, "cdn"));
 };
 
 const container = document.getElementById("root");
 const root = ReactDOM.createRoot(container);
-root.render(React.createElement(App))
+root.render(React.createElement(App));
+
+// with jsx
+
+// const App = ()=> <h1>code is updating by cdn with jsx </h1>
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(<App/>)
 
 
-
+/**
+ * How above code is work
+ * Import the react and react dom library from  cdn 
+ * defines a component App . which return react element built with React.createElement . It create a <div> containing an "h1" tag with the text
+ * get div container of id "root" .
+ * this create a React Root inside that HTML element ("div with id "root").
+ * 
+ */
 
 /**
  *
