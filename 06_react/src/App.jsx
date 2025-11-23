@@ -10,6 +10,7 @@ export default function App() {
       })
       .catch((err) => {
         console.log("something went wrong", err);
+        setMessage("Fails to fetch data");
       });
     return () => {}; // cleanup function
   }, []);
